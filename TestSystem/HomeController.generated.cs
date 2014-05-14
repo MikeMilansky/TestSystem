@@ -93,8 +93,10 @@ namespace TestSystem.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string _ShortTest = "_ShortTest";
                 public readonly string Index = "Index";
             }
+            public readonly string _ShortTest = "~/Views/Home/_ShortTest.cshtml";
             public readonly string Index = "~/Views/Home/Index.cshtml";
         }
     }

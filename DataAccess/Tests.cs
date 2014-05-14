@@ -9,28 +9,28 @@ namespace DataAccess
 {
     class Tests
     {
-        private static List<Test> Tests;
+        private static List<Test> tests;
         private static int lastId = 0;
         public Test Get(int id)
         {
-            return Tests.FirstOrDefault(q => q.ID == id);
+            return tests.FirstOrDefault(q => q.ID == id);
         }
 
         public IEnumerable<Test> GetAll()
         {
-            return Tests;
+            return tests;
         }
 
         public int Add(Test Test)
         {
             Test.ID = ++lastId;
-            Tests.Add(Test);
+            tests.Add(Test);
             return lastId;
         }
 
         public void Remove(int id)
         {
-            Tests.RemoveAt(Tests.FindIndex(q => q.ID == id));     //грохнуть по эксепшену!
+            tests.RemoveAt(tests.FindIndex(q => q.ID == id));     //грохнуть по эксепшену!
         }
     }
 }

@@ -27,11 +27,6 @@ namespace DataAccess
             return true;                        //дописать логику
         }
 
-        //public void Update(Member member)
-        //{
-            
-        //}
-
         public void Remove(int id)
         {
             members = members.Where(m => m.ID != id).ToList();

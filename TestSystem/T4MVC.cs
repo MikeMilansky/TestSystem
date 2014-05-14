@@ -25,8 +25,8 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static partial class MVC
 {
-    public static TestSystem.Controllers.AccountController Account = new TestSystem.Controllers.T4MVC_AccountController();
     public static TestSystem.Controllers.HomeController Home = new TestSystem.Controllers.T4MVC_HomeController();
+    public static T4MVC.AccountController Account = new T4MVC.AccountController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 
