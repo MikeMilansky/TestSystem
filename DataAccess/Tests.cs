@@ -7,7 +7,7 @@ using Entities;
 
 namespace DataAccess
 {
-    class Tests
+    public class Tests
     {
         private static List<Test> tests;
         private static int lastId = 0;

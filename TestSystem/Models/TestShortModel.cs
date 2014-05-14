@@ -13,18 +13,36 @@ namespace TestSystem.Models
 
         #region Business methods
 
+        //public static TestShortModel[] GetAll()
+        //{
+        //    var tests = DAL.Test.GetAll();
+
+        //    return tests.Select<,>(test => new TestShortModel()
+        //    {
+        //        ID = test.ID,
+        //        Title = test.Title,
+        //    }).OrderByDescending(member => member.ID).ToArray();            
+
+
+        //    //return tests.Select(test => new TestShortModel
+        //    //{
+        //    //    ID = test.ID,
+        //    //    Title = test.Title,
+        //    //}).ToArray();
+        //}
+
         public static TestShortModel[] GetAll()
         {
-            //var members = DAL.Member.GetAll();
-            //return members.Select(member => new MemberShortModel
-            //{
-            //    ID = member.ID,
-            //    FirstName = member.FirstName,
-            //    LastName = member.LastName,
-            //    About = member.About,
-            //}).OrderByDescending(member => member.ID).ToArray();
-            return FAKEDAL.Tests;
+            var tests = DAL.Test.GetAll();
+            return tests.Select(test => new TestShortModel
+            {
+                ID = test.ID,
+                Title = test.Title,
+                State = test.State,
+            }).OrderByDescending(test => test.ID).ToArray();
+
         }
+
         #endregion
 
     }
