@@ -10,6 +10,7 @@ namespace TestSystem.Models
     {
         static DAL()
         {
+            Test = new Tests();
         }
         public static Members Member { get; set; }
         public static Tests Test { get; set; }

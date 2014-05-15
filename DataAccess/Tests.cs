@@ -9,8 +9,20 @@ namespace DataAccess
 {
     public class Tests
     {
-        private static List<Test> tests;
+        private static List<Test> tests = new List<Test>();
+        private enum States { Closed, Draft, Actual };
         private static int lastId = 0;
+        public Tests()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Add(new Test() {
+                    Title = String.Format("Test {0}", i),
+                    State = (int)States.Actual,
+                });
+            }            
+        }
+        
         public Test Get(int id)
         {
             return tests.FirstOrDefault(q => q.ID == id);
@@ -21,11 +33,13 @@ namespace DataAccess
             return tests;
         }
 
-        public int Add(Test Test)
+
+        public int Add(Test test)
         {
-            Test.ID = ++lastId;
-            tests.Add(Test);
+            test.ID = ++lastId;
+            tests.Add(test);
             return lastId;
+
         }
 
         public void Remove(int id)

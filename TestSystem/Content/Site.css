@@ -1,10 +1,33 @@
-﻿.test{
-    border:solid 1px;
-    border-color: #32931F;
+﻿html, body{
+    height: 100%;
+    width:100%;
+    position: relative;
+}
+
+.header{
+    height:114px;
+    background:url(images/logo_top.jpg) no-repeat; 
+}
+
+.footer{
+    height:50px;
+    position: absolute;
+    bottom:0;
+    width:100%;
+}
+
+.header, .footer{
+    background-color: #004070;
+    margin: 4px 0;
     border-radius:3px;
-    background-color: #33AD1B;
-    margin: 4px;
-    color: white;
+}
+
+.test{
+    border:1px solid #e3e3e3;
+    border-radius:3px;
+    background-color: #f5f5f5;
+    margin: 4px 0;
+    color: #000000;
 }
 
 .title{
@@ -12,8 +35,19 @@
 }
 
 .state span{
-    font-size: 14px;
+    font-size: 14px;    
+}
+
+.actual{
     background-color: #32931F;
+}
+
+.draft{
+    background-color: #808080;
+}
+
+.closed{
+    background-color: #d9534f;
 }
 
 .state{

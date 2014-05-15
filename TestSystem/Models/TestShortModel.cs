@@ -13,24 +13,6 @@ namespace TestSystem.Models
 
         #region Business methods
 
-        //public static TestShortModel[] GetAll()
-        //{
-        //    var tests = DAL.Test.GetAll();
-
-        //    return tests.Select<,>(test => new TestShortModel()
-        //    {
-        //        ID = test.ID,
-        //        Title = test.Title,
-        //    }).OrderByDescending(member => member.ID).ToArray();            
-
-
-        //    //return tests.Select(test => new TestShortModel
-        //    //{
-        //    //    ID = test.ID,
-        //    //    Title = test.Title,
-        //    //}).ToArray();
-        //}
-
         public static TestShortModel[] GetAll()
         {
             var tests = DAL.Test.GetAll();
@@ -39,7 +21,7 @@ namespace TestSystem.Models
                 ID = test.ID,
                 Title = test.Title,
                 State = test.State,
-            }).OrderByDescending(test => test.ID).ToArray();
+            }).OrderBy(test => test.ID).ToArray();
 
         }
 
