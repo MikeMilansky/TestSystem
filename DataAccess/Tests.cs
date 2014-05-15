@@ -14,6 +14,8 @@ namespace DataAccess
         private static int lastId = 0;
         public Tests()
         {
+            Add(new Test { Title = "DraftTest", State = (int)States.Draft });
+            Add(new Test { Title = "ClosedTest", State = (int)States.Closed });
             for (int i = 1; i <= 10; i++)
             {
                 Add(new Test() {
