@@ -17,7 +17,7 @@
         $(document).ready(function () {
             $('.pass').on('click', function () {
                 var id = $(this).closest(".test").data("id");
-                alert(id);
+                window.location.href = "/Home/Details/" + id;
             });
         });
     </script>

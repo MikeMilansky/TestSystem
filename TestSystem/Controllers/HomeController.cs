@@ -18,5 +18,11 @@ namespace TestSystem.Controllers
             }
             return View(MVC.Shared.Views.Error);
         }
+
+        public ActionResult Details(int id)
+        {
+            var model = TestModel.Get(id);
+            return View(model);
+        }
     }
 }
