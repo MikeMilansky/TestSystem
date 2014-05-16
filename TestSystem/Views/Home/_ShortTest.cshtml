@@ -11,17 +11,17 @@
     <div class="col-md-2">
         @if (Model.State == (int)CommonTools.States.Draft)
         {
-            <div class="btn btn-warning btn-block">Редактировать</div>
+            <div class="btn btn-warning btn-block edit">Редактировать</div>
         }
     </div>
     <div class="col-md-2">
         @if (Model.State == (int)CommonTools.States.Actual)
         {
-            <div class="btn btn-primary btn-block">Пройти</div>
+            <div class="btn btn-primary btn-block pass">Пройти</div>
         }
         else
         {
-            <div class="btn btn-danger btn-block">Удалить</div>
+            <div class="btn btn-danger btn-block delete">Удалить</div>
         }
     </div>
 </div>
