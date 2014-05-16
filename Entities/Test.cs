@@ -11,6 +11,6 @@ namespace Entities
         public int ID { get; set; }
         public string Title { get; set; }
         public int State { get; set; }
-        public IEnumerable<Question> Questions { get; set; }
+        public List<Question> Questions { get; set; }
     }
 }

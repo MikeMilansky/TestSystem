@@ -11,3 +11,14 @@
 <div class="row">
     <div class="col-md-3"><div class="btn btn-success btn-block">Создать</div></div>
 </div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('.pass').on('click', function () {
+                var id = $(this).closest(".test").data("id");
+                alert(id);
+            });
+        });
+    </script>
+}

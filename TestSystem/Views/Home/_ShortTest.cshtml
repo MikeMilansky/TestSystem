@@ -3,7 +3,7 @@
 @{
     var state = @CommonTools.TestState[Model.State];
 }
-<div class="row test">
+<div class="row test" data-id="@Model.ID">
     <div class="col-md-5 title">@Model.Title</div>
     <div class="col-md-2 col-md-offset-1 state">
         <span class="label @state">@state</span>

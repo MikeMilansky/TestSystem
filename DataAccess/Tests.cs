@@ -18,9 +18,14 @@ namespace DataAccess
             Add(new Test { Title = "ClosedTest", State = (int)States.Closed });
             for (int i = 1; i <= 10; i++)
             {
-                Add(new Test() {
+                Add(new Test()
+                {
                     Title = String.Format("Test {0}", i),
                     State = (int)States.Actual,
+                    Questions = new List<Question>() {new InputQuestion(){ID = 1, Text = "Quest 1" },
+                                                      new SingleQuestion(){ID = 2, Text = "Quest 2", Options = new string[] {"first", "second", "third"}},
+                                                      new MultiplyQuestion(){ID = 3, Text = "Quest 3", Options = new string[] {"first", "second", "third"}}
+                    },
                 });
             }            
         }

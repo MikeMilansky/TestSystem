@@ -35,7 +35,9 @@
 }
 
 .state span{
-    font-size: 14px;    
+    font-size: 14px;
+    display: inline-block;
+    width: 65px;
 }
 
 .actual{
