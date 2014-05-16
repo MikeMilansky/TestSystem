@@ -195,6 +195,12 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DAL.cs" />
+    <Compile Include="Models\InputQuestionModel.cs" />
+    <Compile Include="Models\MemberModel.cs" />
+    <Compile Include="Models\MemberShortModel.cs" />
+    <Compile Include="Models\MultiplyQuestionModel.cs" />
+    <Compile Include="Models\SingleQuestionModel.cs" />
+    <Compile Include="Models\TestModel.cs" />
     <Compile Include="Models\TestShortModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedController.generated.cs">
@@ -328,6 +334,7 @@
       <LastGenOutput>T4MVC.cs</LastGenOutput>
     </None>
     <Content Include="Views\Home\_ShortTest.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InputQuestion.cs" />
     <Compile Include="MultiplyQuestion.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Member.cs" />
