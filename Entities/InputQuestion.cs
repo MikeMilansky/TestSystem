@@ -8,5 +8,6 @@ namespace Entities
 {
     public class InputQuestion: Question
     {
+        public string Answer { get; set; }
     }
 }

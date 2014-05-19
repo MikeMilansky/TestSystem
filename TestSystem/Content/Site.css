@@ -6,7 +6,8 @@
 
 .header{
     height:114px;
-    background:url(images/logo_top.jpg) no-repeat; 
+    background:url(images/logo_top.jpg) no-repeat;
+    padding: 15px; 
 }
 
 .footer{
@@ -54,4 +55,13 @@
 
 .state{
     padding-top:8px;
+}
+
+#add{
+    padding-right:10px;
+}
+
+.login{
+    margin-bottom: 10px;
+    color:white;
 }

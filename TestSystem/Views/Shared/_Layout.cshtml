@@ -6,12 +6,15 @@
         <meta name="viewport" content="width=device-width" />
         <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />                              @*переделать на бандлы*@
         <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
 <body class="container">
     <div id="wrap">
-        <header class="header"></header>
+        <header class="header">
+            @Html.Partial(MVC.Shared.Views._LoginPartial)
+        </header>
         <section class="content-wrapper main-content clear-fix">
             @RenderBody()
         </section>

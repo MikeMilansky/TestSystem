@@ -1,0 +1,11 @@
+﻿@model TestSystem.Models.MultiplyQuestion
+
+@foreach (var option in  Model.Options)
+{
+    <div class="checkbox">
+        <label>
+            <input name="Options.@option.ID" type="checkbox" value="" id="@option.ID" @(option.IsChecked ? "checked": "")>
+            @option.Text
+        </label>
+    </div>
+}

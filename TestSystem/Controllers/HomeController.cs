@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,10 +19,16 @@ namespace TestSystem.Controllers
             return View(MVC.Shared.Views.Error);
         }
 
-        public ActionResult Details(int id)
+        public virtual ActionResult Details(int id)
         {
             var model = TestModel.Get(id);
             return View(model);
+        }
+
+        [HttpPost]
+        public virtual ActionResult Details(FormCollection form)
+        {
+            return View();
         }
     }
 }

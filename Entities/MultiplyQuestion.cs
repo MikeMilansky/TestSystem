@@ -8,6 +8,6 @@ namespace Entities
 {
     public class MultiplyQuestion : Question
     {
-        public string[] Options { get; set; }
+        public List<Option> Options { get; set; }
     }
 }

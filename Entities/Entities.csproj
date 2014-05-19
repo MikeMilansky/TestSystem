@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="InputQuestion.cs" />
     <Compile Include="MultiplyQuestion.cs" />
+    <Compile Include="Option.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Member.cs" />
     <Compile Include="SingleQuestion.cs" />

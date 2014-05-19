@@ -31,5 +31,10 @@ namespace DataAccess
         {
             members = members.Where(m => m.ID != id).ToList();
         }
+
+        public string GetHash(string Login)
+        {
+            return members.Find(m => m.Login == Login).PasswordHash;
+        }
     }
 }
