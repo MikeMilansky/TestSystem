@@ -5,11 +5,5 @@
 
 @foreach (var option in Model.Options)
 {
-    <div class="radio">
-        <label>
-            <input type="radio" name="optionsRadios" id="options_@i" value="option_@i">
-            @option
-        </label>
-    </div>
-    i++;
+    <label>@Html.RadioButtonFor(m=>m.Options,option.ID) @option.Text</label>
 }

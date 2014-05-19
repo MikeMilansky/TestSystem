@@ -11,7 +11,7 @@ namespace TestSystem.Controllers
     {
         public virtual ActionResult Index()
         {
-            var model = TestShortModel.GetAll();
+            var model = ShortTest.GetAll();
             if (model != null)
             {
                 return View(model);
@@ -21,13 +21,20 @@ namespace TestSystem.Controllers
 
         public virtual ActionResult Details(int id)
         {
-            var model = TestModel.Get(id);
+            var model = Test.Get(id);
+            return View(model);
+        }
+
+        public virtual ActionResult Demo()
+        {
+            var model = new Demo { ID = 1, Title = "myTitle", myList = new List<string> { "1", "2", "3" } };
             return View(model);
         }
 
         [HttpPost]
-        public virtual ActionResult Details(FormCollection form)
+        public virtual ActionResult Details(Answer answer)
         {
+            var answ = answer;
             return View();
         }
     }

@@ -23,7 +23,10 @@ namespace DataAccess
                     Title = String.Format("Test {0}", i),
                     State = (int)States.Actual,
                     Questions = new List<Question>() {new InputQuestion(){ID = 1, Text = "Quest 1" },
-                                                      new SingleQuestion(){ID = 2, Text = "Quest 2", Options = new string[] {"first", "second", "third"}},
+                                                      new SingleQuestion(){ID = 2, Text = "Quest 2", Options = new List<Option> {new Option {ID = 1, IsChecked = true, Text = "first" }, 
+                                                                                                                                 new Option {ID = 2, IsChecked = false, Text = "second" },
+                                                                                                                                 new Option {ID = 3, IsChecked = false, Text = "third" },}},
+
                                                       new MultiplyQuestion(){ID = 3, Text = "Quest 3", Options = new List<Option> {new Option {ID = 1, IsChecked = true, Text = "first" }, 
                                                                                                                                    new Option {ID = 2, IsChecked = false, Text = "second" },
                                                                                                                                    new Option {ID = 3, IsChecked = false, Text = "third" },}}

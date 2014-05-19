@@ -8,10 +8,10 @@ using TestSystem.Tools;
 
 namespace TestSystem.Models
 {
-    public class LoginModel
+    public class Login
     {
         [Required]
-        public string Login { get; set; }
+        public string MemberLogin { get; set; }
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
@@ -21,12 +21,12 @@ namespace TestSystem.Models
         #region Business methods
         public bool TryToLogin()
         {
-            string hashFromBase = DAL.Member.GetHash(Login);
+            string hashFromBase = DAL.Member.GetHash(MemberLogin);
             string generatedHash = CommonTools.MakeHash(Password);
             bool cookieOn = (Remember != null) ? true : false;
             if (hashFromBase == generatedHash)
             {
-                FormsAuthentication.RedirectFromLoginPage(Login, createPersistentCookie: cookieOn);
+                FormsAuthentication.RedirectFromLoginPage(MemberLogin, createPersistentCookie: cookieOn);
                 return true;
             }
             return false;

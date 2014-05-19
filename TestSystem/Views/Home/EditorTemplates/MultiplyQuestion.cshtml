@@ -1,11 +1,15 @@
 ﻿@model TestSystem.Models.MultiplyQuestion
-
+@{
+    int i = 0;
+    int QuestionID = (int)ViewBag.QuestionID;
+}
 @foreach (var option in  Model.Options)
 {
     <div class="checkbox">
         <label>
-            <input name="Options.@option.ID" type="checkbox" value="" id="@option.ID" @(option.IsChecked ? "checked": "")>
+            <input name="Questions[@QuestionID].Options[@i]" type="checkbox" value="11" id="@option.ID" @(option.IsChecked ? "checked": "")>
             @option.Text
         </label>
     </div>
+    i++;
 }

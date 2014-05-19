@@ -137,12 +137,12 @@ namespace TaskManager.Controllers
         }
 
         [NonAction]
-        partial void LoginOverride(T4MVC_System_Web_Mvc_JsonResult callInfo, TestSystem.Models.LoginModel model);
+        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, TestSystem.Models.Login model);
 
         [NonAction]
-        public override System.Web.Mvc.JsonResult Login(TestSystem.Models.LoginModel model)
+        public override System.Web.Mvc.ActionResult Login(TestSystem.Models.Login model)
         {
-            var callInfo = new T4MVC_System_Web_Mvc_JsonResult(Area, Name, ActionNames.Login);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
             LoginOverride(callInfo, model);
             return callInfo;

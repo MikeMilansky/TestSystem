@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Entities;
 
 namespace TestSystem.Models
 {
-    public class AnswerModel
+    public class Demo
     {
         public int ID { get; set; }
-        public List<Question> Questions { get; set; }
+        public String Title { get; set; }
+        public List<string> myList { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace TestSystem.Models
 {
-    public class TestShortModel
+    public class ShortTest
     {
         public int ID { get; set; }
         public string Title { get; set; }
@@ -13,10 +13,10 @@ namespace TestSystem.Models
 
         #region Business methods
 
-        public static TestShortModel[] GetAll()
+        public static ShortTest[] GetAll()
         {
             var tests = DAL.Test.GetAll();
-            return tests.Select(test => new TestShortModel
+            return tests.Select(test => new ShortTest
             {
                 ID = test.ID,
                 Title = test.Title,

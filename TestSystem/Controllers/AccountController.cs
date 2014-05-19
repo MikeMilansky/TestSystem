@@ -21,7 +21,7 @@ namespace TaskManager.Controllers
         }
 
         [HttpPost]        
-        public virtual ActionResult Login(LoginModel model)
+        public virtual ActionResult Login(Login model)
         {
              if (ModelState.IsValid)
             {

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace TestSystem.Models
 {
-    public class MemberModel
+    public class MemberShort
     {
     }
 }

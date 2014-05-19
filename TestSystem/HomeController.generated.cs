@@ -81,6 +81,7 @@ namespace TestSystem.Controllers
         {
             public readonly string Index = "Index";
             public readonly string Details = "Details";
+            public readonly string Demo = "Demo";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -88,6 +89,7 @@ namespace TestSystem.Controllers
         {
             public const string Index = "Index";
             public const string Details = "Details";
+            public const string Demo = "Demo";
         }
 
 
@@ -98,7 +100,7 @@ namespace TestSystem.Controllers
         public class ActionParamsClass_Details
         {
             public readonly string id = "id";
-            public readonly string form = "form";
+            public readonly string answer = "answer";
         }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -111,10 +113,12 @@ namespace TestSystem.Controllers
             public class _ViewNamesClass
             {
                 public readonly string _ShortTest = "_ShortTest";
+                public readonly string Demo = "Demo";
                 public readonly string Details = "Details";
                 public readonly string Index = "Index";
             }
             public readonly string _ShortTest = "~/Views/Home/_ShortTest.cshtml";
+            public readonly string Demo = "~/Views/Home/Demo.cshtml";
             public readonly string Details = "~/Views/Home/Details.cshtml";
             public readonly string Index = "~/Views/Home/Index.cshtml";
             static readonly _EditorTemplatesClass s_EditorTemplates = new _EditorTemplatesClass();
@@ -158,14 +162,25 @@ namespace TestSystem.Controllers
         }
 
         [NonAction]
-        partial void DetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, System.Web.Mvc.FormCollection form);
+        partial void DemoOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Details(System.Web.Mvc.FormCollection form)
+        public override System.Web.Mvc.ActionResult Demo()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Demo);
+            DemoOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void DetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, TestSystem.Models.Answer answer);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Details(TestSystem.Models.Answer answer)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Details);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "form", form);
-            DetailsOverride(callInfo, form);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "answer", answer);
+            DetailsOverride(callInfo, answer);
             return callInfo;
         }
 
